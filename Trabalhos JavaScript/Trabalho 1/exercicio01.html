@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio01</title>
+
+   
+</head>
+<body>
+    <script>
+
+// 1 - Cria uma função anónima que seja logo executada, e que faça console.log da string isto foi demasiado rápido!;
+        
+(function() {
+            console.log("isto foi demasiado rápido!");
+        })();
+
+// 2 - Cria uma closure que construa campos de um formulário. Na primeira função devemos passar o nome do campo, e na segunda função devemos passar o resultado. Deverá gerar algo como: Nome: Vitor;
+
+ function criarCampo(nomeDoCampo) {
+    return function(valor) {
+        console.log(`${nomeDoCampo}: ${valor}`);
+    };
+}
+
+const campoNome = criarCampo("Nome");
+campoNome("João");  
+
+const campoIdade = criarCampo("Idade");
+campoIdade("28"); 
+
+
+// 3 - Cria uma função construtora relativa a um produto que tenha um nome e um valor à escolha;
+
+function Produto(nome, valor) {
+    this.nome = nome;
+    this.valor = valor;
+}
+
+let meuProduto = new Produto('Exemplo de Produto', 10);
+
+// 4 - Altera o valor deste produto para 2.5;
+
+meuProduto.valor = 2.5;
+
+// 5 - Faz console.log do valor do produto convertido num número inteiro.
+            
+console.log(Math.floor(meuProduto.valor));            
+            
+            
+            </script>
+</body>
+</html>
