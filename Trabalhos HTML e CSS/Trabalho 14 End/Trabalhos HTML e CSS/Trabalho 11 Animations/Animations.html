@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Animações</title>
+	<style>
+		html,
+		body {
+			margin: 0;
+			height: 100%;
+			background-color: #e57474;
+			display: flex;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.Pai {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			width: 75%;
+			margin-bottom: 10%;
+			position: relative;
+
+		}
+
+		.filho1 {
+			background-color: #e57474;
+			width: 100%;
+			height: 75%;
+			border: 1px solid white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-left: none;
+			border-right: none;
+
+
+		}
+
+		.filho2 {
+			background-color: #e57474;
+			width: 100%;
+			height: 50%;
+			border: 1px solid white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			border-left: none;
+			border-right: none;
+		}
+
+		.filho3 {
+			background-color: #e57474;
+			width: 100%;
+			height: 50%;
+			border: 1px solid white;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			border-left: none;
+			border-right: none;
+		}
+
+		.filho4 {
+			background-color: #e57474;
+			width: 100%;
+			height: 50%;
+			border: 1px solid white;
+			position: relative;
+			border-left: none;
+			border-right: none;
+
+
+
+
+
+
+		}
+
+		.filho5 {
+			background-color: #e57474;
+			width: 100%;
+			height: 50%;
+			border: 1px solid white;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			text-align: center;
+			border-left: none;
+			border-right: none;
+
+
+		}
+
+		.outra {
+			background-color: #e57474;
+			width: 100%;
+			height: 30%;
+
+			top: 35%;
+			border: 1px solid black;
+			border-left: none;
+			border-right: none;
+			position: absolute;
+			display: flex;
+			align-items: center;
+
+
+
+
+		}
+
+		.centro {
+			position: relative;
+			top: 5%;
+			color: white;
+			opacity: 0.7;
+			font-family: 'Inter', sans-serif;
+		}
+
+		.esta {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0.7;
+		}
+
+
+		.este {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			letter-spacing: 8px;
+			font-size: 120%;
+
+		}
+
+		p {
+			opacity: 0.7;
+			color: white;
+			font-family: 'Inter', sans-serif;
+		}
+
+
+
+		.animação {
+			background-color: blue;
+			width: 3%;
+			height: 75%;
+			animation-name: example;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-direction: reverse;
+			animation-timing-function: linear;
+			position: absolute;
+
+		}
+
+
+
+
+		@keyframes example {
+			0% {
+				left: 0;
+			}
+
+			50% {
+				left: calc(100% - 3%);
+			}
+
+			100% {
+				left: 0;
+			}
+		}
+
+		.inicio {
+			position: absolute;
+			top: 20%;
+			left: 46%;
+			background-color: blue;
+			width: 6%;
+			height: 5%;
+
+			transform: skew(-45deg, 0deg) translate(10px, 10px);
+			animation-name: inicio;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-direction: reverse;
+			animation-timing-function: ease-in;
+			;
+
+		}
+
+
+		@keyframes inicio {
+
+			0% {
+				top: 20%;
+			}
+
+			100% {
+				top: 14%;
+				box-shadow: 30px 20px 3px rgba(0, 0, 0, 0.1);
+			}
+		}
+
+		.bora {
+			display: flex;
+			background-color: #e57474;
+			position: absolute;
+			top: 75%;
+			width: 100%;
+			height: 25%;
+			gap: 10px;
+			align-items: center;
+		}
+
+		.barra {
+			background-color: white;
+			width: 25%;
+			height: 30%;
+			border-radius: 100px;
+			display: flex;
+			position: relative;
+			overflow: hidden;
+
+		}
+
+
+
+		.fill-bar {
+			background-color: blue;
+			height: 100%;
+			animation-name: sapo;
+			animation-duration: 4s;
+			animation-timing-function: linear;
+			position: relative;
+			animation-fill-mode: forwards;
+			left: 0;
+
+
+
+		}
+
+		.fill-bar-2 {
+
+			animation-delay: 4s;
+
+
+
+		}
+
+
+
+
+
+
+		.fill-bar-3 {
+
+			animation-delay: 8s;
+
+
+
+		}
+
+
+		.fill-bar-4 {
+
+			animation-delay: 12s;
+
+
+		}
+
+
+
+		@keyframes sapo {
+			0% {
+				width: 0%;
+			}
+
+			100% {
+				width: 100%;
+			}
+		}
+
+
+
+		.aqui {
+			background-color: #e57474;
+			width: 50px;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			animation: girar 3s linear infinite;
+			top: 25%;
+		}
+
+		.quadrado {
+
+			position: absolute;
+			width: 30%;
+			height: 30%;
+			border-radius: 100%;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+
+
+		}
+
+		.quadrado:nth-child(1) {
+			background: blue;
+			top: 0;
+			left: 0;
+			animation-name: quadrado;
+		}
+
+
+		.quadrado:nth-child(2) {
+			background: blue;
+			top: 0;
+			right: 0;
+			animation-name: quadrado1;
+		}
+
+		.quadrado:nth-child(3) {
+			background: blue;
+			bottom: 0;
+			right: 0;
+			animation-name: quadrado2;
+		}
+
+		.quadrado:nth-child(4) {
+			background: blue;
+			bottom: 0;
+			left: 0;
+			animation-name: quadrado3;
+		}
+
+		@keyframes quadrado {
+			to {
+				transform: translate(100%, 100%)
+			}
+
+
+
+		}
+
+		@keyframes quadrado1 {
+			to {
+				transform: translate(-100%, 100%)
+			}
+
+		}
+
+		@keyframes quadrado2 {
+			to {
+				transform: translate(-100%, -100%)
+			}
+
+
+
+		}
+
+		@keyframes quadrado3 {
+			to {
+				transform: translate(100%, -100%)
+			}
+
+		}
+
+		@keyframes girar {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="Pai">
+		<div class="filho1">
+			<p>Perspetive</p>
+			<div class="inicio"></div>
+		</div>
+
+		<div class="filho2">
+			<p>Progress</p>
+			<div class="bora">
+				<div class="barra">
+					<div class="fill-bar fill-bar-1"></div>
+				</div>
+				<div class="barra">
+					<div class="fill-bar fill-bar-2"></div>
+				</div>
+				<div class="barra">
+					<div class="fill-bar fill-bar-3"></div>
+				</div>
+				<div class="barra">
+					<div class="fill-bar fill-bar-4"></div>
+				</div>
+			</div>
+		</div>
+		<div class="filho3">
+			<Span style="display: inline-block;position: absolute; top: 10%;">
+				<p>Loading</p>
+			</Span>
+			<div class="aqui">
+				<div class="quadrado"></div>
+				<div class="quadrado"></div>
+				<div class="quadrado"></div>
+				<div class="quadrado"></div>
+			</div>
+
+		</div>
+		<div class="filho4">
+			<div class="esta">
+				<p><span class="appear">Appear</span></p>
+			</div>
+			<div class="este">
+				<p><span class="appear">APPEAR from above</span></p>
+			</div>
+
+
+		</div>
+		<div class="filho5"><span class="centro">Pause me while you can</span>
+			<div class="outra">
+				<div class="animação"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Input</title>
+
+	<link rel="stylesheet" href="../Trabalho 12 Formulário 2!!/fontawesome-free-6.5.2-web/css/all.min.css">
+
+
+
+	<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			width: 100%;
+			background-color: gray;
+
+
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+
+		.Pai {
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+
+
+		}
+
+
+
+		.um {
+
+			top: 20px;
+			left: 20px;
+
+
+
+
+
+		}
+
+		.dois {
+
+
+			top: 20px;
+			left: 280px;
+		}
+
+		.tres {
+
+
+			top: 20px;
+			left: 540px;
+
+		}
+
+
+		.quatro {
+
+
+			top: 184px;
+			left: 20px;
+		}
+
+		.cinco {
+
+
+			top: 184px;
+			left: 280px;
+		}
+
+		.seis {
+
+			top: 184px;
+			left: 540px;
+		}
+
+
+		.sete {
+
+			top: 348px;
+			left: 20px;
+		}
+
+		.oito {
+
+			top: 348px;
+			left: 280px;
+		}
+
+
+		.nove {
+
+			top: 348px;
+			left: 540px;
+
+		}
+
+		.dez {
+
+			top: 512px;
+			left: 20px;
+		}
+
+
+		.onze {
+
+			top: 512px;
+			left: 280px;
+		}
+
+
+		.doze {
+
+			top: 512px;
+			left: 540px;
+		}
+
+		.treze {
+
+			top: 112px;
+			left: 20px;
+		}
+
+		.catorze {
+
+			height: 32px;
+			top: 112px;
+			left: 280px;
+		}
+
+		.quinze {
+
+			top: 112px;
+			left: 540px;
+		}
+
+		.dezasseis {
+
+			top: 440px;
+			left: 20px;
+		}
+
+		.dezassete {
+
+			height: 32px;
+			top: 440px;
+			left: 280px;
+		}
+
+		.dezoito {
+
+			top: 440px;
+			left: 540px;
+		}
+
+		.dezanove {
+
+			top: 276px;
+			left: 20px;
+		}
+
+
+		.vinte {
+
+			top: 276px;
+			left: 280px;
+		}
+
+		.vinteum {
+
+			top: 276px;
+			left: 540px;
+		}
+
+
+		.vintedois {
+
+			top: 624px;
+			left: 20px;
+		}
+
+		.vintetres {
+
+			top: 624px;
+			left: 280px;
+		}
+
+
+		.vintequatro {
+
+			top: 624px;
+			left: 540px;
+		}
+
+
+
+
+		label {
+			width: 62px;
+			height: 55px;
+			font-family: Inter;
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 18px;
+			text-align: left;
+			color: rgba(62, 62, 60, 1);
+			position: absolute;
+			left: 5%;
+
+
+		}
+
+
+
+		input[type=text] {
+
+			font-family: Inter;
+			font-size: 13px;
+			font-weight: 400;
+			line-height: 20px;
+			text-align: left;
+			border: none;
+			color: rgba(112, 110, 107, 1);
+
+		}
+
+		.inputs {
+			width: 220px;
+			height: 32px;
+			padding: 6px 12px 6px 12px;
+			border-radius: 4px 0px 0px 0px;
+			border: 1px 0px 0px 0px;
+			background-color: white;
+
+			;
+
+
+		}
+
+		.error {
+			width: 62px;
+			height: 18px;
+			font-family: Inter;
+			font-size: 12px;
+			font-weight: 400;
+			line-height: 18px;
+			text-align: left;
+			color: rgba(194, 57, 52, 1);
+			position: relative;
+			top: 60px;
+
+		}
+
+		.fa-magnifying-glass {
+			width: 16px;
+			;
+			height: 16px;
+		}
+
+		.lupa1 {
+			width: 23px;
+			;
+			height: 16px;
+			color: rgba(176, 173, 171, 1);
+			position: relative;
+			right: 5px;
+			top: 2px;
+		}
+
+		.lupa2 {
+			width: 23px;
+			;
+			height: 16px;
+			color: rgba(176, 173, 171, 1);
+			position: relative;
+			left: 180px;
+			top: 2px;
+		}
+
+		.lupa3 {
+			width: 23px;
+			;
+			height: 16px;
+			color: rgba(176, 173, 171, 1);
+			position: relative;
+			right: 5px;
+			top: 3px;
+		}
+
+
+
+		.umm {
+			position: absolute;
+			top: 20px;
+		}
+
+		.doiss {
+			position: absolute;
+			top: 20px;
+		}
+
+
+
+
+		.tress {
+			position: absolute;
+			top: 20px;
+		}
+
+		.quatros {
+			position: absolute;
+			top: 20px;
+			border: 1px solid rgba(21, 137, 238, 1)
+		}
+
+		.cincos {
+			position: absolute;
+			top: 20px;
+		}
+
+		.seiss {
+			position: absolute;
+			top: 20px;
+		}
+
+		.setess {
+			position: absolute;
+			top: 20px;
+			background: rgba(236, 235, 234, 1);
+		}
+
+		.oitoss {
+			position: absolute;
+			top: 20px;
+			background: rgba(236, 235, 234, 1);
+		}
+
+		.novess {
+			position: absolute;
+			top: 20px;
+			background-color: rgba(236, 235, 234, 1);
+			;
+		}
+
+		.dezs {
+			position: absolute;
+			top: 20px;
+			border: 1px solid rgba(194, 57, 52, 1)
+		}
+
+		.onzes {
+			position: absolute;
+			top: 20px;
+			border: 1px solid rgba(194, 57, 52, 1)
+		}
+
+		.dozes {
+			position: absolute;
+			top: 20px;
+			border: 1px solid rgba(194, 57, 52, 1)
+		}
+
+		.focus:focus {
+			background-color: brown;
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+
+
+
+	<div class="Pai um">
+		<form>
+
+			<label for="Place">Field Label</label>
+			<div class="inputs umm">
+
+				<input type="text" id="Place" name="Place" value="Placeholder" style=" width: 65px; height:20px;
+								">
+			</div>
+
+
+
+		</form>
+	</div>
+
+
+
+	<form class="Pai dois">
+		<label for="Place">Field Label</label>
+		<div class="inputs doiss"><span class="lupa1"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder" style=" width: 65px; height:20px;
+			"></div>
+
+
+	</form>
+
+
+	<form class="Pai tres">
+		<label for="Place">Field Label</label>
+
+		<div class="inputs tress">
+			<div class="agora"><span class="lupa2"><i class="fa-solid fa-magnifying-glass"></i></span></div><input
+				type="text" id="Place" name="Place" value="Placeholder"
+				style="position: absolute; top: 6px; width: 65px; height:20px">
+		</div>
+
+
+	</form>
+
+	<form class="Pai quatro">
+		<label for="Place">Field Label</label>
+		<div class="inputs quatros"><input type="text" id="Place" name="Place" value="Placeholder" class="focus"
+				style=" width: 67px; height:20px;border-right: 2px solid black;"></div>
+
+
+	</form>
+
+	<form class="Pai cinco">
+		<label for="Place">Field Label</label>
+		<div class="inputs quatros"><span class="lupa3"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder" class="focus"
+				style=" width: 67px; height:20px;border-right: 2px solid black;"></div>
+
+
+	</form>
+
+	<form class="Pai seis">
+		<label for="Place">Field Label</label>
+		<div class="inputs quatros"><span class="lupa2"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder" class="focus"
+				style="position: absolute;left:10px; width: 67px; height:20px;border-right: 2px solid black;"></div>
+
+
+	</form>
+
+	<form class="Pai sete">
+		<label for="Place">Field Label</label>
+		<div class="inputs setess"><input type="text" id="Place" name="Place" value="Placeholder" class="disa" style=" width: 65px; height:20px;background: rgba(236, 235, 234, 1);
+			"></div>
+
+	</form>
+
+	<form class="Pai oito">
+		<label for="Place">Field Label</label>
+		<div class="inputs oitoss"><span class="lupa1"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder" class="disa" style=" width: 65px; height:20px;background: rgba(236, 235, 234, 1);
+			"></div>
+
+
+	</form>
+
+	<form class="Pai nove">
+		<label for="Place">Field Label</label>
+		<div class="inputs novess"><span class="lupa2"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder" class="disa" style=" width: 65px; height:20px;background: rgba(236, 235, 234, 1);position: relative;
+			"></div>
+
+
+	</form>
+
+	<form class="Pai dez">
+		<label for="Place">Field Label</label>
+		<div class="inputs dezs"><input type="text" id="Place" name="Place" value="Placeholder"
+				style="width: 65px; height:20px;"></div>
+		<div class="error">Error Label</div>
+
+
+
+	</form>
+
+	<form class="Pai onze">
+		<label for="Place">Field Label</label>
+		<div class="inputs onzes"><span class="lupa1"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder" style="width: 65px; height:20px;"---------------></div>
+		<div class="error">Error Label</div>
+
+
+
+	</form>
+
+	<form class="Pai doze">
+		<label for="Place">Field Label</label>
+		<div class="inputs dozes"><span class="lupa2"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder"
+	></div>
+		<div class="error">Error Label</div>
+
+
+
+	</form>
+
+	<form class="Pai treze">
+
+		<div class="inputs umm"><input type="text" id="Place" name="Place" value="Placeholder"
+				style="width: 65px; height:20px;"></div>
+
+
+	</form>
+
+	<form class="Pai catorze">
+
+		<div class="inputs umm"><span class="lupa1"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder" style="width: 65px; height:20px;"></div>
+
+	</form>
+
+	<form class="Pai quinze">
+
+		<div class="inputs umm"><span class="lupa2"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder"
+				style="width: 65px; height:20px;position: relative;"></div>
+
+
+	</form>
+
+	<form class="Pai dezasseis">
+
+		<div class="inputs novess"><input type="text" id="Place" name="Place" value="Placeholder" class="disa" style="width: 65px; height:20px;background: rgba(236, 235, 234, 1);
+			"></div>
+
+
+	</form>
+
+	<form class="Pai dezassete">
+
+		<div class="inputs novess"><span class="lupa1"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder" class="disa" style="width: 65px; height:20px;background: rgba(236, 235, 234, 1);
+			"></div>
+
+
+	</form>
+
+	<form class="Pai dezoito">
+
+		<div class="inputs novess"><span class="lupa2"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder" class="disa" style="width: 65px; height:20px;background: rgba(236, 235, 234, 1);
+			"></div>
+
+
+	</form>
+
+	<form class="Pai dezanove">
+		<label for="Place">Field Label</label>
+		<div class="inputs quatros"><input type="text" id="Place" name="Place" value="Placeholder" class="focus"
+				style="width: 66px; height:20px;border-right: 2px solid black;"></div>
+
+
+	</form>
+
+	<form class="Pai vinte">
+		<label for="Place">Field Label</label>
+		<div class="inputs quatros"><span class="lupa1"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder" class="focus"
+				style="width: 66px; height:20px;border-right: 2px solid black;"></div>
+
+
+	</form>
+
+	<form class="Pai vinteum">
+		<label for="Place">Field Label</label>
+		<div class="inputs quatros"><span class="lupa2"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder" class="focus"
+				style="width: 66px; height:20px;border-right: 2px solid black;"></div>
+
+
+
+	</form>
+
+	<form class="Pai vintedois">
+
+		<div class="inputs dozes"><input type="text" id="Place" name="Place" value="Placeholder"
+				style="width: 65px; height:20px;"></div>
+		<div class="error">Error Label</div>
+
+
+
+	</form>
+
+	<form class="Pai vintetres">
+
+		<div class="inputs dozes"><span class="lupa1"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder" style=" width: 65px; height:20px;"></div>
+		<div class="error">Error Label</div>
+
+
+
+
+	</form>
+
+	<form class="Pai vintequatro">
+
+		<div class="inputs dozes"><span class="lupa2"><i class="fa-solid fa-magnifying-glass"></i></span><input
+				type="text" id="Place" name="Place" value="Placeholder"
+				style=" width: 65px"></div>
+		<div class="error">Error Label</div>
+
+	</form>
+
+
+</body>
+
+</html>

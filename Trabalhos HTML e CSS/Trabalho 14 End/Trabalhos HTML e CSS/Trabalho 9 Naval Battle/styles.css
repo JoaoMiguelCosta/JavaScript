@@ -1,0 +1,96 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic);
+
+html,
+body {
+    font-family: Ubuntu;
+    font-weight: 400;
+    font-size: 16px;
+    background: rgba(10, 10, 10, 1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+}
+
+.board {
+    border: 1px solid rgba(50, 50, 50, 1);
+    background: rgba(20, 20, 20, 1);
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cell {
+    border: 0.5px dashed rgba(50, 50, 50, 1);
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.target {
+    background-color: rgb(94, 94, 94);
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background: rgb(87, 64, 236);
+    position: absolute;
+    margin: 10px;
+    border-radius: 100%;
+}
+
+pre {
+    display: inline;
+}
+
+
+
+/* Coloca o teu CSS a partir daqui */
+.ball-0 {position: absolute; top: 70%; left: 20%;
+
+}
+
+.ball-1 {position: absolute;top: 80%; left:60%;
+
+}
+
+.ball-2 {position: absolute;top: 80%; left:50%;
+   
+}
+
+.ball-3 {position: absolute; left:50%;}
+   
+
+.ball-4 {position: absolute; left:40%; top: 40%;
+   
+}
+
+.ball-5 {position: absolute; right: 10%; top: 20%;
+  
+}
+
+.ball-6 {position: absolute; right: 20%; top: 20%;
+    
+}
+
+.ball-7 {position: absolute; right: 50%; top: 70%;}
+ 
+
+.ball-8 {position: absolute;right: 10%; top: 70%;
+  
+}
+
+.ball-9 {position: absolute; right: 80%;
+ 
+}
+
+.ball-10 {position: absolute; top: 10%; left: 70%;
+
+}
