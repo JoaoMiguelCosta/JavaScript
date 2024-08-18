@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02 Final - Ecommerce Homepage</title>
+    <style>
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+        #feedback {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="feedback"></div>
+    <div id="product-container"></div>
+
+    <script>
+        const API_URL = 'https://fakestoreapi.com/products';
+        const CART_URL = 'https://fakestoreapi.com/carts/7';
+        const USER_ID = 1;
+
+    // Carregar dados da API
+
+        async function fetchProducts() {
+            try {
+                const response = await fetch(API_URL);
+                const data = await response.json();
+                console.log('Produtos carregados:', data); 
+                return data;
+            } catch (error) {
+                console.error('Error fetching products:', error);
+            }
+        }
+
+// Criar Dinamicamente a Grelha de Produtos
+        function createProductGrid(products) {
+            const container = document.getElementById('product-container');
+            container.innerHTML = '';
+            
+            products.forEach(product => {
+                const productDiv = document.createElement('div');
+                productDiv.className = 'product';
+                
+                const img = document.createElement('img');
+                img.src = product.image;
+                img.alt = product.title;
+                productDiv.appendChild(img);
+                
+                const title = document.createElement('h2');
+                title.textContent = product.title;
+                productDiv.appendChild(title);
+                
+                const button = document.createElement('button');
+                button.textContent = 'Add to cart';
+                button.onclick = () => addToCart(product.id);
+                productDiv.appendChild(button);
+                
+                container.appendChild(productDiv);
+            });
+        }
+
+//  Adicionar Funcionalidade ao Botão "Add to Cart"
+        async function addToCart(productId) {
+            const date = new Date().toISOString().split('T')[0];
+            const feedbackDiv = document.getElementById('feedback');
+            
+            try {
+                const response = await fetch(CART_URL, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        userId: USER_ID,
+                        date: date,
+                        products: [
+                            {
+                                productId: productId,
+                                quantity: 1
+                            }
+                        ]
+                    }),
+                });
+
+                const result = await response.json();
+                feedbackDiv.textContent = 'Produto adicionado ao carrinho com sucesso!';
+                feedbackDiv.style.color = 'green';
+                console.log('Produto adicionado ao carrinho:', result);
+            } catch (error) {
+                feedbackDiv.textContent = 'Erro ao adicionar o produto ao carrinho.';
+                feedbackDiv.style.color = 'red';
+                console.error('Error adding product to cart:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const products = await fetchProducts();
+            createProductGrid(products);
+        });
+    </script>
+</body>
+</html>

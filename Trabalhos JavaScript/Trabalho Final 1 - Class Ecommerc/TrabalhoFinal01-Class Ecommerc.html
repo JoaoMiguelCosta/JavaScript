@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01 Final de Avaliação - Class Ecommerce</title>
+</head>
+<body>
+    <script>
+ // Criar uma class chamada Ecommerce;
+class Ecommerce {
+    constructor() {
+        this.produtos = []; 
+        this.carrinho = []; 
+        this.nextId = 1;   
+    }
+//addProduct: aceita um produto e o adicione à lista de produtos;
+   
+addProduct(name, price) {
+        const produto = {
+            name,
+            price,
+            id: this.nextId++
+        };
+        this.produtos.push(produto);
+        return produto;
+    }
+
+// setProductPrice: Aceita 2 parametros: productId e price; Deve actualizar o produto com o preço novo.
+    
+setProductPrice(productId, price) {
+        const produto = this.produtos.find(p => p.id === productId);
+        if (produto) {
+            produto.price = price;
+        }
+    }
+
+// getAllProducts: devolve a lista de todos os produtos
+
+getAllProducts() {
+        return this.produtos;
+    }
+
+//getAllProductsNames: devolve uma string com todos os nomes dos produtos, separados por ponto e virgula “;” ;
+   
+getAllProductsNames() {
+        return this.produtos.map(p => p.name).join('; ');
+    }
+
+// getProductById: aceita um id de produto e devolve esse mesmo produto;
+
+getProductById(productId) {
+        return this.produtos.find(p => p.id === productId);
+    }
+
+// getProductByName: aceita um nome de produto e devolve esse mesmo produto;
+
+getProductByName(name) {
+        return this.produtos.find(p => p.name === name);
+    }
+// getProductsByPrice:aceita 2 parametros: initialPrice e finalPrice. Devolve os produtos que sejam iguais ou superiors a initialPrice e menores ou igual a finalPrice;
+    getProductsByPrice(initialPrice, finalPrice) {
+        return this.produtos.filter(p => p.price >= initialPrice && p.price <= finalPrice);
+    }
+
+//addProductToCart: aceita um produto e adiciona esse produto ao carrinho de compras;
+
+addProductToCart(product) {
+        const produto = this.produtos.find(p => p.id === product.id);
+        if (produto) {
+            this.carrinho.push(produto);
+        }
+    }
+
+// getCart: devolve a lista de produtos do carrinho de compras;
+
+getCart() {
+        return this.carrinho;
+    }
+
+//getCartTotalPrice: devolve a soma de todos os produtos do carrinho;
+
+getCartTotalPrice() {
+        return this.carrinho.reduce((total, produto) => total + produto.price, 0);
+    }
+}
+
+
+    </script>
+</body>
+</html>
