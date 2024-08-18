@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+   .iphone{background-color: rgba(39, 39, 39, 1); width: 768px; height: 1024px; position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);}
+
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(39, 39, 39, 1);
+      position: relative;
+      display: flex;
+      width: 1440px;
+      height: 1024px;
+     
+
+    }
+
+
+    h1 {
+
+      top: 128px;
+      left: 341px;
+      position: absolute;
+
+      width: 757px;
+      height: 48px;
+      font-family: Inter;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 48.41px;
+      text-align: left;
+      color: rgba(250, 255, 0, 1);
+
+    }
+
+
+
+    p {
+      width: 593px;
+      height: 29px;
+      top: 194px;
+      left: 423px;
+      position: absolute;
+      font-family: Inter;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 29.05px;
+      text-align: center;
+      color: rgba(250, 255, 0, 1);
+    }
+
+    .Quadro {
+      width: 900px;
+      position: absolute;
+      height: 369px;
+      top: 327px;
+      left: 270px;
+      background: rgba(39, 39, 39, 1);
+      display: flex;
+      border-radius: 8px 0px 0px 0px;
+      border: 1px 0px 0px 0px;
+      border: 1px solid rgba(94, 94, 94, 1);
+      border: none;
+
+
+    }
+
+    .cima {
+      width: 327px;
+      height: 19px;
+      top: 327px;
+      position: absolute;
+      left: 270px;
+      gap: 32px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .Direita {
+      width: 138px;
+      height: 19px;
+      position: absolute;
+      top: 327px;
+      left: 1032px;
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19.36px;
+      text-align: left;
+      color: rgba(250, 255, 0, 1);
+
+
+
+    }
+
+    .um {
+      width: 213px;
+      height: 313px;
+      position: absolute;
+      top: 383px;
+      left: 270px;
+      padding: 12px 0px 0px 0px;
+      border-radius: 8px 0px 0px 0px;
+      border: 1px 0px 0px 0px;
+      border: 1px solid rgba(94, 94, 94, 1);
+      background: rgba(64, 64, 64, 1);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dois {
+      width: 213px;
+      height: 313px;
+      position: absolute;
+      top: 383px;
+      left: 499px;
+      padding: 12px 0px 0px 0px;
+      border-radius: 8px 0px 0px 0px;
+      border: 1px 0px 0px 0px;
+      border: 1px solid rgba(94, 94, 94, 1);
+      background: rgba(64, 64, 64, 1);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+
+    .tres {
+      width: 213px;
+      height: 313px;
+      position: absolute;
+      top: 383px;
+      left: 728px;
+      padding: 12px 0px 0px 0px;
+
+      border-radius: 8px 0px 0px 0px;
+      border: 1px 0px 0px 0px;
+      border: 1px solid rgba(94, 94, 94, 1);
+      background: rgba(64, 64, 64, 1);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .quatro {
+      width: 213px;
+      height: 313px;
+      position: absolute;
+      top: 383px;
+      left: 957px;
+      padding: 12px 0px 0px 0px;
+
+      border-radius: 8px 0px 0px 0px;
+      border: 1px 0px 0px 0px;
+      border: 1px solid rgba(94, 94, 94, 1);
+      background: rgba(64, 64, 64, 1);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .Fas {
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19.36px;
+      text-align: left;
+      color: rgba(254, 254, 254, 1);
+      width: 61px;
+      height: 19px;
+    }
+
+    .Ne {
+      width: 44px;
+      height: 19px;
+
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19.36px;
+      text-align: left;
+      color: rgba(254, 254, 254, 1);
+    }
+
+    .So {
+      width: 47px;
+      height: 19px;
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19.36px;
+      text-align: left;
+      color: rgba(254, 254, 254, 1);
+    }
+
+    .Spor {
+      width: 52px;
+      height: 19px;
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19.36px;
+      text-align: left;
+      color: rgba(254, 254, 254, 1);
+    }
+
+    .primeira {
+      width: 189px;
+      height: 130px;
+      border-radius: 8px 0px 0px 0px;
+
+      background-color: red;
+    }
+
+      .primeira img {width: 189px;
+      height: 130px;
+      border-radius: 8px 0px 0px 0px;}
+
+    .segunda {
+      width: 189px;
+      height: 34px;
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 16.94px;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+
+
+    }
+
+    .terceira {
+      width: 189px;
+      height: 79px;
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 400p;
+      line-height: 16.94px;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+    }
+
+    .quarta {
+      width: 189px;
+    }
+
+    .primeiraa {
+      width: 189px;
+      height: 130px;
+      border-radius: 8px 0px 0px 0px;
+
+
+    }
+
+    .segundaa {
+      width: 189px;
+      height: 34px;
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 16.94px;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+
+
+    }
+
+    .terceiraa {
+      width: 189px;
+      height: 79px;
+      font-family: Inter;
+      font-size: 14px;
+      font-weight: 400p;
+      line-height: 16.94px;
+      text-align: left;
+      color: rgba(255, 255, 255, 1);
+
+
+    }
+
+    .quartaa {
+      width: 189px;
+    }
+
+   
+
+
+    @media screen and (max-width: 768px) {
+
+    
+
+      h1 {
+width: 390px;
+height: 144px;
+text-align: center;
+top: 20px; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+;
+
+}
+@media screen and (max-width: 768px) {
+  p {
+    width: 429px;
+    height: 135px;
+    top: 153px; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .cima {
+      width: 300px;
+      height: 19px;
+      top: 400px;
+      position: absolute;
+      left: 575px;
+     
+   
+      
+    }
+  }
+
+  
+@media screen and (max-width: 768px) {
+  
+  .um {
+      width: 379px;
+      height: 124px;
+      
+      top: 445px;
+      left: 525px;
+      flex-direction: row;
+     
+  }
+  }
+
+  @media screen and (max-width: 768px) {
+  
+  .dois {
+    width: 379px;
+      height: 124px;
+      
+      top: 585px;
+      left: 525px;
+      flex-direction: row;
+     
+  }
+  }
+  @media screen and (max-width: 768px) {
+  
+  .tres {
+    width: 379px;
+      height: 124px;
+      
+      top: 725px;
+      left: 525px;
+      flex-direction: row;
+     
+  }
+  }
+
+  @media screen and (max-width: 768px) {
+  
+  .quatro {
+    width: 379px;
+      height: 124px;
+      
+      top: 865px;
+      left: 525px;
+      flex-direction: row;
+     
+  }
+  }
+  
+
+  @media screen and (max-width: 768px) {
+  
+  .primeira{
+    width: 100px;
+    height: 100px;
+    
+    
+
+
+
+     
+  }
+  }
+  @media screen and (max-width: 768px) {
+  .primeira img {
+    width: 100px; 
+    height: 100px;
+    
+  }
+}
+@media screen and (max-width: 768px) {
+  .segunda { display: none;
+   
+    
+  }
+}
+@media screen and (max-width: 768px) {
+  .terceira { width: 273px;
+height: 41px;
+white-space: nowrap;
+
+
+
+
+ }
+}
+
+@media screen and (max-width: 768px) {
+  br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .quarta { width: 74px;
+height: 15px;
+position: absolute;
+top: 70%;
+left: 29%; }
+}
+    
+@media screen and (max-width: 768px) {
+  .quebra { display: block;    white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+}
+     
+      
+@media screen and (max-width: 768px) {
+  .Direita { width: 138px;
+height: 19px;
+top: 1013px;
+left: 660px;
+
+}
+}
+
+      
+@media screen and (max-width: 768px) {
+  .ora{display: block
+
+}
+}
+
+@media screen and (max-width: 768px) {
+  .viva{display: block
+
+}
+}
+
+     
+    
+  </style>
+
+</head>
+
+<body>
+
+  <div class="iphone"></div>
+  
+
+  <div class="titulo">
+    <h1>Transform a Landing Page Lo-Fi to Hi-fi</h1>
+  </div>
+  
+    <p><span class="ora">“Friends now post a lot more to </span>stories, and send a <br>lot more DMs,<span class="viva">than they post to Feed.”</span></br></p>
+  
+
+
+
+  <div class="Quadro"></div>
+
+  <div class="cima">
+    <div class="Fas">Fashion</div>
+    <div class="Ne">News</div>
+    <div class="So">Social</div>
+    <div class="Spor">Sports</div>
+  </div>
+  <div class="Direita">View More Articule</div>
+
+
+
+  <div class="um">
+    <div class="primeira"><img src="Imagens\imagem1.png" alt="imagem" 
+   ></div>
+    <div class="segunda">US Senate Approves TikTok Sell-off Proposal</div>
+
+    <div class="terceira">We’ve seen this with <br>celebrities and <span class="quebra">
+       politicians,<br> where their past social <br> posts
+        come back to hunt 
+          them, brand even lose them opportunities as a result. And maybe, that’s one of the reasons why
+          people are more
+        </span>
+    </span></div>
+
+    <div class="quarta"><time datetime="2024-12-08"><span style="font-family: Inter;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 14.52px;
+      text-align: left;
+      width: 74px;
+height: 15px;
+color: rgba(48, 123, 236, 1);
+display: inline-block;">12 Aug 2024</span></time></div>
+
+  </div>
+  <div class="dois">
+
+    <div class="primeira"><img src="Imagens\imagem1.png" alt="imagem" ></div>
+    <div class="segunda">US Senate Approves TikTok Sell-off Proposal</div>
+
+    <div class="terceira">We’ve seen this with <br>celebrities and <span class="quebra">
+      politicians,<br> where their past social <br> posts
+       come back to hunt them, brand even lose them opportunities as a result. And maybe, that’s one of the reasons why
+       people are more
+   </span></div>
+
+    <div class="quarta"><time datetime="2024-12-08"><span style="font-family: Inter;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 14.52px;
+      text-align: left;
+      width: 74px;
+height: 15px;
+color: rgba(48, 123, 236, 1);
+display: inline-block;">12 Aug 2024</span></time></div>
+
+
+  </div>
+  <div class="tres">
+    <div class="primeira"><img src="Imagens\imagem1.png" alt="imagem"></div>
+    <div class="segunda">US Senate Approves TikTok Sell-off Proposal</div>
+
+    <div class="terceira">We’ve seen this with <br>celebrities and <span class="quebra">
+      politicians,<br> where their past social <br> posts
+       come back to hunt them, brand even lose them opportunities as a result. And maybe, that’s one of the reasons why
+       people are more
+   </span></div>
+
+    <div class="quarta"><time datetime="2024-12-08"><span style="font-family: Inter;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 14.52px;
+      text-align: left;
+      width: 74px;
+      height: 15px;
+      color: rgba(48, 123, 236, 1);
+      display: inline-block;">12 Aug 2024</span></time></div>
+
+
+  </div>
+  <div class="quatro">
+    <div class="primeira"><img src="Imagens\imagem1.png" alt="imagem" ></div>
+    <div class="segunda">US Senate Approves TikTok Sell-off Proposal</div>
+
+    <div class="terceira">We’ve seen this with <br>celebrities and<span class="quebra">
+      politicians,<br> where their past social <br> posts
+       come back to hunt them, brand even lose them opportunities as a result. And maybe, that’s one of the reasons why
+       people are more
+   </span></div>
+
+    <div class="quarta"><time datetime="2024-12-08"><span style="font-family: Inter;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 14.52px;
+      text-align: left;
+      width: 74px;
+      height: 15px;
+      color: rgba(48, 123, 236, 1);
+      display: inline-block;">12 Aug 2024</span></time></div>
+
+
+
+  </div>
+
+
+
+</body>
+
+</html>
